@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
                 ListView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
-                  itemCount: 22,
+                  itemCount: 30,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 20),
