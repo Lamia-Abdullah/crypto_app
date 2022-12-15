@@ -1,23 +1,39 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/cupertino.dart';
 import '../style.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    const moonIcon =CupertinoIcons.moon_stars;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 27, 27, 27),
+      appBar: AppBar(
+        title: Text(
+                  "Crypto Market",
+                  style: textStyle(24, Colors.white, FontWeight.bold),
+                ),
+        backgroundColor:Color.fromARGB(255, 36, 35, 37),
+        elevation: 0,
+        actions: [
+          const SizedBox(width:20),
+          IconButton(
+          icon:const Icon(moonIcon,color:Colors.grey,
+          ),
+          onPressed: () {},
+    ),
+    ],),
+      backgroundColor: Color.fromARGB(255, 52, 39, 91),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20, top: 60),
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 10 ),
         child: SingleChildScrollView(
             physics: ScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Crypto Market",
-                  style: textStyle(24, Colors.white, FontWeight.bold),
-                ),
+                // Text(
+                //   "Crypto Market",
+                //   style: textStyle(24, Colors.white, FontWeight.bold),
+                // ),
                 ListView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -75,6 +91,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
@@ -101,5 +118,6 @@ class HomeScreen extends StatelessWidget {
             )),
       ),
     );
+    
   }
 }

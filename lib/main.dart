@@ -1,4 +1,5 @@
 
+// import 'package:crypto_app/home_page.dart';
 import 'package:crypto_app/nav.dart';
 import 'package:crypto_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +10,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
