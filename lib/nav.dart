@@ -19,9 +19,9 @@ class _home_pageState extends State<home_page> {
     });
   }
   final screens = [
-    ProfileScreen(),
+    const ProfileScreen(),
     HomeScreen(),
-    SearchScreen(),
+    const SearchScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -44,10 +44,10 @@ class _home_pageState extends State<home_page> {
           ),
         ],
         currentIndex: _selectedIndex,
-        unselectedItemColor:Color.fromARGB(255, 182, 182, 182),
+        unselectedItemColor:const Color.fromARGB(255, 182, 182, 182),
         selectedItemColor: Colors.white,
         onTap: _onItemTapped,
-        backgroundColor: Color.fromARGB(223, 16, 16, 16),
+        backgroundColor: const Color.fromARGB(223, 16, 16, 16),
       ),
     );
   }
